@@ -8,3 +8,8 @@ build/
 *.tsbuildinfo
 next-env.d.ts.bak
 /data-store/*.json
+
+.vercel
+.env*
+# …but the template carries no secrets and must stay in the repo.
+!.env.example
