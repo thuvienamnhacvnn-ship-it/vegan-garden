@@ -3,7 +3,7 @@
 import { useDeferredValue, useMemo, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import { Search, X, SlidersHorizontal } from 'lucide-react'
-import type { Dish, DishTag, MenuCategory } from '@/types'
+import type { Dish, MenuCategory } from '@/types'
 import { dishes, menuCategories } from '@/data/menu'
 import { useLocale } from '@/i18n/LocaleProvider'
 import { cn } from '@/lib/format'

@@ -301,6 +301,27 @@ custom cursor and the intro screen.
 
 ---
 
+## Deploying to Vercel
+
+`next build` passes as-is and there is no edge-runtime or case-sensitivity
+trap, so the build itself is clean on Linux. Two things do **not** carry over
+automatically:
+
+**1. Set the environment variables.** `.env.local` is git-ignored, so nothing
+reaches Vercel on its own. `NEXT_PUBLIC_SITE_URL` matters most — it falls back
+to `http://localhost:3020`, and that fallback ends up inside `sitemap.xml`,
+`robots.txt`, every canonical link and every Open Graph image URL. Set it, plus
+`ADMIN_PASSWORD` (empty disables `/admin` entirely) and the WhatsApp trio if
+owner alerts should go out.
+
+**2. `data-store/` does not persist.** Serverless filesystems are read-only and
+thrown away between invocations. `appendRecord` catches the write failure and
+logs the record instead of failing the guest's request, so bookings still
+*appear* to work — but nothing is stored and the `/admin` inbox stays empty.
+Before taking real bookings, replace the two functions in `src/lib/store.ts`
+with a database (that file is the only seam), or set
+`RESERVATION_STORAGE=console` to make the behaviour explicit.
+
 ## Before going live
 
 The address is confirmed from the mock-up. **The phone number, e-mail address,
