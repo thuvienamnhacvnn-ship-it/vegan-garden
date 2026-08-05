@@ -1,0 +1,573 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "story": "Câu chuyện",
+    "menu": "Thực đơn",
+    "reservation": "Đặt bàn",
+    "order": "Đặt món online",
+    "gallery": "Thư viện ảnh",
+    "contact": "Liên hệ",
+    "impressum": "Thông tin pháp lý",
+    "privacy": "Chính sách bảo mật",
+    "terms": "Điều khoản"
+  },
+  "common": {
+    "viewMenu": "Xem thực đơn",
+    "viewFullMenu": "Xem toàn bộ thực đơn",
+    "reserveTable": "Đặt bàn",
+    "reserveNow": "Đặt bàn ngay",
+    "orderOnline": "Đặt món online",
+    "viewGallery": "Xem thư viện ảnh",
+    "readMore": "Tìm hiểu thêm",
+    "details": "Xem chi tiết",
+    "close": "Đóng",
+    "back": "Quay lại",
+    "next": "Tiếp",
+    "previous": "Trước",
+    "loading": "Đang tải …",
+    "sending": "Đang gửi …",
+    "all": "Tất cả",
+    "from": "từ",
+    "search": "Tìm kiếm",
+    "clear": "Xoá bộ lọc",
+    "callUs": "Gọi cho chúng tôi",
+    "directions": "Chỉ đường",
+    "addToCart": "Thêm vào giỏ",
+    "required": "Bắt buộc",
+    "optional": "không bắt buộc",
+    "yes": "Có",
+    "no": "Không",
+    "seeAll": "Xem tất cả",
+    "goHome": "Về trang chủ",
+    "openingHours": "Giờ mở cửa",
+    "findUs": "Tìm chúng tôi",
+    "today": "Hôm nay",
+    "closed": "Đóng cửa",
+    "openNow": "Đang mở cửa",
+    "closedNow": "Hiện đang đóng cửa"
+  },
+  "a11y": {
+    "skipToContent": "Chuyển tới nội dung chính",
+    "openMenu": "Mở menu",
+    "closeMenu": "Đóng menu",
+    "openCart": "Mở giỏ hàng",
+    "closeCart": "Đóng giỏ hàng",
+    "switchLanguage": "Chuyển ngôn ngữ",
+    "currentLanguage": "Ngôn ngữ hiện tại",
+    "sliderPause": "Tạm dừng trình chiếu",
+    "sliderPlay": "Phát trình chiếu",
+    "previousSlide": "Ảnh trước",
+    "nextSlide": "Ảnh tiếp theo",
+    "goToSlide": "Tới ảnh {n}",
+    "previousImage": "Ảnh trước",
+    "nextImage": "Ảnh tiếp theo",
+    "zoomImage": "Phóng to ảnh",
+    "logoHome": "Vegan Garden – về trang chủ",
+    "socialLink": "Vegan Garden trên {network}",
+    "increase": "Tăng số lượng",
+    "decrease": "Giảm số lượng",
+    "remove": "Xoá",
+    "themeNight": "Chuyển sang chế độ ban đêm",
+    "themeDay": "Chuyển sang chế độ ban ngày",
+    "mainNav": "Điều hướng chính"
+  },
+  "weekdays": {
+    "0": "Chủ nhật",
+    "1": "Thứ hai",
+    "2": "Thứ ba",
+    "3": "Thứ tư",
+    "4": "Thứ năm",
+    "5": "Thứ sáu",
+    "6": "Thứ bảy"
+  },
+  "hero": {
+    "eyebrow": "Nhà hàng chay Việt · Berlin Friedrichshain",
+    "badge": "100 % Thuần chay",
+    "scroll": "Khám phá",
+    "slides": [
+      {
+        "titleLines": [
+          "Nghệ thuật của",
+          "thanh khiết và an yên"
+        ],
+        "subtitle": "Ẩm thực Việt thuần chay 100 %",
+        "text": "Nguyên liệu tươi. Sống tỉnh thức. Vì một ngày mai tốt đẹp hơn.",
+        "alt": "Tô chay Việt với đậu hũ nướng, rau thơm và chanh"
+      },
+      {
+        "titleLines": [
+          "Cội nguồn từ Việt Nam.",
+          "Nuôi dưỡng bởi thiên nhiên."
+        ],
+        "subtitle": "Công thức truyền thống, kể lại bằng thực vật",
+        "text": "Mỗi món ăn được làm bằng sự tỉ mỉ, nguyên liệu tươi và rất nhiều yêu thương.",
+        "alt": "Không gian ấm áp với bàn gỗ, cây xanh và đèn mây tre"
+      },
+      {
+        "titleLines": [
+          "Khu vườn an yên",
+          "giữa lòng Berlin"
+        ],
+        "subtitle": "Chốn dừng chân yên tĩnh ở Friedrichshain",
+        "text": "Cây xanh, gỗ ấm và ánh sáng dịu – chỉ cần thở thật chậm.",
+        "alt": "Ô cửa lớn với cây xanh trong không gian Vegan Garden"
+      },
+      {
+        "titleLines": [
+          "Món ngon,",
+          "tâm an, đất lành."
+        ],
+        "subtitle": "Buổi tối ở Vegan Garden",
+        "text": "Ánh nến, hương vị Việt và thời gian dành cho những người thân yêu.",
+        "alt": "Những bàn ăn thắp nến vào buổi tối tại Vegan Garden"
+      }
+    ]
+  },
+  "brandBar": {
+    "items": [
+      {
+        "title": "100 % Thuần chay",
+        "text": "Không sản phẩm động vật. Chỉ thuần thực vật, tinh khiết."
+      },
+      {
+        "title": "Nguyên liệu tươi",
+        "text": "Rau củ theo mùa, tự nhiên, chuẩn bị mới mỗi ngày."
+      },
+      {
+        "title": "Di sản Việt Nam",
+        "text": "Công thức truyền thống Việt, nấu bằng yêu thương và ký ức."
+      },
+      {
+        "title": "Sống bền vững",
+        "text": "Chúng tôi chăm sóc trái đất như chăm sóc bạn."
+      },
+      {
+        "title": "Ăn trong tỉnh thức",
+        "text": "Món ăn lành cho tâm trí sáng và một đời sống an vui."
+      }
+    ]
+  },
+  "storyTeaser": {
+    "eyebrow": "Câu chuyện của chúng tôi",
+    "titleLines": [
+      "Cội nguồn từ Việt Nam.",
+      "Nuôi dưỡng bởi thiên nhiên."
+    ],
+    "paragraphs": [
+      "Vegan Garden không chỉ là một nhà hàng – đó là hành trình của hương vị, của sự tỉnh thức và lòng từ bi.",
+      "Lấy cảm hứng từ di sản ẩm thực phong phú của Việt Nam, chúng tôi nấu 100 % từ thực vật, với nguyên liệu tươi và tự nhiên, mang lại sự cân bằng cho cơ thể và bình an cho tâm trí."
+    ],
+    "script": "Nghệ thuật của thanh khiết và an yên",
+    "quote": "Chúng tôi tin rằng thức ăn có sức mạnh chữa lành, kết nối và tạo nên một thế giới tốt đẹp hơn cho tất cả.",
+    "imageAlt": "Không gian Vegan Garden với bàn gỗ và logo hoa sen vàng trên tường"
+  },
+  "commitment": {
+    "title": "Cam kết của chúng tôi",
+    "subtitle": "Năm giá trị hiện diện trong từng món ăn"
+  },
+  "signature": {
+    "eyebrow": "Món đặc trưng",
+    "titleParts": [
+      "Tinh hoa ẩm thực",
+      "chay",
+      "Việt Nam"
+    ],
+    "highlight": "chay",
+    "paragraphs": [
+      "Những món đặc trưng của chúng tôi tôn vinh hương vị Việt đích thực, được kể lại bằng ngôn ngữ của thực vật.",
+      "Mỗi đĩa ăn là sự tỉ mỉ, nguyên liệu tươi và một chút yêu thương."
+    ],
+    "bestseller": "Bán chạy"
+  },
+  "quoteBand": {
+    "motto": [
+      "Món ngon, tâm an,",
+      "đất lành."
+    ],
+    "quote": "Hãy để thức ăn là thuốc và thuốc chính là thức ăn của bạn.",
+    "author": "Hippocrates",
+    "ctaTitle": "Sẵn sàng trải nghiệm sự thanh khiết?",
+    "cta": "Đặt bàn ngay"
+  },
+  "whyUs": {
+    "eyebrow": "Vì sao chọn Vegan Garden",
+    "title": "Một nhà hàng nuôi dưỡng, không chỉ để no",
+    "text": "Từ hương nước dùng đầu tiên đến ngụm trà cuối cùng, chúng tôi mong bạn thấy thật dễ chịu.",
+    "items": [
+      {
+        "title": "Bếp làm thủ công",
+        "text": "Nước dùng ninh nhiều giờ, bánh tráng cuốn tại chỗ, nước chấm pha mới mỗi ngày."
+      },
+      {
+        "title": "Nguyên liệu thật thà",
+        "text": "Rau củ theo mùa, đậu hũ từ xưởng thủ công ở Berlin và rau thơm nhập mỗi sáng."
+      },
+      {
+        "title": "Không gian tĩnh lặng",
+        "text": "Nhiều cây xanh, gỗ ấm và ánh sáng dịu – nơi bạn thật sự được dừng lại."
+      },
+      {
+        "title": "Dành cho tất cả mọi người",
+        "text": "Có lựa chọn không gluten, không hạt, cay hoặc thanh nhẹ – bạn chỉ cần nói với chúng tôi."
+      }
+    ]
+  },
+  "galleryPreview": {
+    "eyebrow": "Không gian của chúng tôi",
+    "titleParts": [
+      "Khu vườn",
+      "an yên",
+      "giữa lòng Berlin"
+    ],
+    "highlight": "an yên",
+    "paragraphs": [
+      "Bước vào một không gian nơi thiên nhiên gặp gỡ sự nuôi dưỡng. Nhà hàng của chúng tôi là chốn dừng chân yên bình giữa nhịp sống hối hả của thành phố.",
+      "Giữa cây xanh, gỗ ấm và ánh sáng tự nhiên dịu nhẹ, từng chi tiết đều mời bạn chậm lại, hít thở và tận hưởng khoảnh khắc."
+    ]
+  },
+  "reviews": {
+    "eyebrow": "Cảm nhận của khách",
+    "title": "Khách hàng nói gì về chúng tôi",
+    "subtitle": "Những chia sẻ thật từ khách đã ngồi lại cùng chúng tôi.",
+    "ratingLabel": "{rating} trên 5 sao"
+  },
+  "reservationCta": {
+    "eyebrow": "Đặt bàn",
+    "title": "Chúng tôi mong được đón bạn",
+    "text": "Dù là bữa tối ấm cúng, buổi họp mặt gia đình hay một dịp đặc biệt – chỉ vài giây để giữ bàn cho bạn.",
+    "note": "Nhóm từ 8 khách trở lên, vui lòng gọi điện cho chúng tôi."
+  },
+  "contactBlock": {
+    "eyebrow": "Ghé thăm chúng tôi",
+    "titleParts": [
+      "Chúng tôi nóng lòng được",
+      "chào đón",
+      "bạn"
+    ],
+    "highlight": "chào đón",
+    "paragraphs": [
+      "Dù là một bữa tối ấm cúng, buổi sum họp gia đình hay một dịp đặc biệt, chúng tôi luôn muốn bạn có những kỷ niệm đáng nhớ.",
+      "Hãy đến như chính bạn, và ra về với thật nhiều năng lượng."
+    ],
+    "script": "Mở cửa mỗi ngày để nuôi dưỡng bạn.",
+    "mapTitle": "Vegan Garden trên Google Maps",
+    "quickReservation": "Đặt bàn",
+    "confirmationNote": "Bạn sẽ nhận được email xác nhận."
+  },
+  "menuPage": {
+    "eyebrow": "Thực đơn",
+    "titleParts": [
+      "Tinh hoa ẩm thực",
+      "chay",
+      "Việt Nam"
+    ],
+    "highlight": "chay",
+    "intro": "Tất cả món ăn đều 100 % thuần thực vật. Không thịt, không cá, không trứng, không sữa – bù lại là rất nhiều rau thơm, gia vị và sự kiên nhẫn.",
+    "searchPlaceholder": "Tìm món ăn …",
+    "filterCategory": "Danh mục",
+    "filterDiet": "Bộ lọc",
+    "resultCount": "{count} món",
+    "resultCountOne": "1 món",
+    "empty": "Không tìm thấy món nào phù hợp.",
+    "emptyHint": "Hãy xoá bớt bộ lọc hoặc thử một từ khoá khác.",
+    "categories": {
+      "all": "Tất cả món",
+      "starters": "Khai vị",
+      "soups": "Món nước",
+      "noodles": "Món bún & phở",
+      "rice": "Món cơm",
+      "mains": "Món chính",
+      "desserts": "Tráng miệng",
+      "drinks": "Đồ uống"
+    },
+    "tags": {
+      "vegan": "Thuần chay",
+      "glutenFree": "Không gluten",
+      "spicy": "Cay",
+      "bestseller": "Bán chạy",
+      "new": "Món mới",
+      "nutFree": "Không hạt"
+    },
+    "spice": {
+      "label": "Độ cay",
+      "mild": "Thanh nhẹ",
+      "medium": "Cay vừa",
+      "hot": "Cay nhiều"
+    },
+    "filters": {
+      "glutenFree": "Không gluten",
+      "spicy": "Cay",
+      "mild": "Thanh nhẹ",
+      "bestseller": "Bán chạy"
+    },
+    "modal": {
+      "ingredients": "Nguyên liệu",
+      "allergens": "Chất gây dị ứng",
+      "close": "Đóng chi tiết món"
+    },
+    "plantBased": "Thuần thực vật",
+    "allergyNote": "Bạn bị dị ứng hoặc không dung nạp? Hãy cho chúng tôi biết – hầu hết món ăn đều có thể điều chỉnh."
+  },
+  "reservationPage": {
+    "eyebrow": "Đặt bàn",
+    "title": "Bàn của bạn tại Vegan Garden",
+    "intro": "Đặt bàn chưa tới một phút. Mã đặt bàn sẽ hiển thị ngay sau khi bạn gửi.",
+    "formTitle": "Đặt bàn",
+    "sideTitle": "Thông tin hữu ích",
+    "sideItems": [
+      "Chúng tôi giữ bàn thêm 15 phút so với giờ đã đặt.",
+      "Nhóm từ 8 khách trở lên, vui lòng gọi điện trước.",
+      "Hầu hết món ăn đều có phiên bản không gluten, không hạt hoặc ít cay.",
+      "Có ghế trẻ em và lối đi thuận tiện cho xe lăn."
+    ],
+    "fields": {
+      "date": "Ngày",
+      "time": "Giờ",
+      "guests": "Số khách",
+      "name": "Họ và tên",
+      "email": "Địa chỉ email",
+      "phone": "Số điện thoại",
+      "notes": "Ghi chú",
+      "allergies": "Dị ứng thực phẩm",
+      "consent": "Tôi đã đọc và đồng ý với chính sách bảo mật."
+    },
+    "placeholders": {
+      "date": "Chọn ngày",
+      "time": "Chọn giờ",
+      "guests": "Số lượng khách",
+      "name": "Họ và tên của bạn",
+      "email": "ten@vidu.com",
+      "phone": "+49 …",
+      "notes": "Bàn cạnh cửa sổ, sinh nhật, ghế trẻ em …",
+      "allergies": "ví dụ: đậu phộng, gluten, đậu nành"
+    },
+    "guestsOption": "{n} khách",
+    "guestsOptionOne": "1 khách",
+    "guestsMore": "Nhiều hơn {n} khách? Vui lòng gọi cho chúng tôi.",
+    "submit": "Đặt bàn ngay",
+    "submitting": "Đang gửi yêu cầu …",
+    "success": {
+      "title": "Cảm ơn bạn, bàn đã được ghi nhận!",
+      "text": "Chúng tôi đã nhận yêu cầu và sẽ xác nhận qua email trong ít phút nữa.",
+      "codeLabel": "Mã đặt bàn của bạn",
+      "summary": "Thông tin đặt bàn",
+      "again": "Đặt bàn khác"
+    },
+    "errors": {
+      "generic": "Không gửi được yêu cầu đặt bàn. Vui lòng thử lại hoặc gọi cho chúng tôi.",
+      "date": "Vui lòng chọn ngày.",
+      "datePast": "Vui lòng chọn một ngày trong tương lai.",
+      "dateHorizon": "Chỉ có thể đặt bàn trước tối đa {days} ngày.",
+      "time": "Vui lòng chọn giờ.",
+      "timeClosed": "Rất tiếc, nhà hàng không mở cửa vào khung giờ này.",
+      "timePast": "Khung giờ này đã trôi qua.",
+      "guests": "Vui lòng cho biết số khách.",
+      "guestsMax": "Trên {max} khách, vui lòng gọi điện cho chúng tôi.",
+      "name": "Vui lòng nhập họ tên.",
+      "nameShort": "Họ tên quá ngắn.",
+      "email": "Vui lòng nhập email hợp lệ.",
+      "phone": "Vui lòng nhập số điện thoại hợp lệ.",
+      "notesLong": "Vui lòng viết ngắn gọn hơn (tối đa 500 ký tự).",
+      "consent": "Vui lòng đồng ý với chính sách bảo mật."
+    }
+  },
+  "orderPage": {
+    "eyebrow": "Đặt món online",
+    "title": "Vegan Garden mang về nhà",
+    "intro": "Chọn món bạn yêu thích, tự đến lấy hoặc để chúng tôi giao tận nơi.",
+    "addNote": "Thêm ghi chú",
+    "noteLabel": "Ghi chú cho bếp",
+    "notePlaceholder": "ví dụ: không rau mùi, thêm cay",
+    "saveNote": "Lưu",
+    "added": "Đã thêm {name}",
+    "cart": {
+      "title": "Đơn của bạn",
+      "empty": "Giỏ hàng đang trống.",
+      "emptyHint": "Hãy xem thực đơn và thêm món bạn thích.",
+      "browse": "Xem thực đơn",
+      "subtotal": "Tạm tính",
+      "deliveryFee": "Phí giao hàng",
+      "free": "Miễn phí",
+      "total": "Tổng cộng",
+      "checkout": "Thanh toán",
+      "continue": "Chọn thêm món",
+      "itemCount": "{count} món",
+      "itemCountOne": "1 món",
+      "clear": "Xoá giỏ hàng",
+      "freeDeliveryHint": "Thêm {amount} nữa để được miễn phí giao hàng.",
+      "minimumHint": "Giá trị tối thiểu để giao hàng: {amount}."
+    },
+    "checkout": {
+      "title": "Thanh toán",
+      "methodTitle": "Tự đến lấy hay giao hàng",
+      "pickup": "Đến lấy",
+      "pickupHint": "Frankfurter Allee 21, 10247 Berlin",
+      "delivery": "Giao hàng",
+      "deliveryHint": "Trong khu Friedrichshain và lân cận",
+      "timeTitle": "Thời gian nhận món",
+      "timeAsap": "Càng sớm càng tốt",
+      "timeScheduled": "Chọn giờ",
+      "contactTitle": "Thông tin liên hệ",
+      "addressTitle": "Địa chỉ giao hàng",
+      "summaryTitle": "Tóm tắt đơn hàng",
+      "fields": {
+        "name": "Họ tên",
+        "email": "Email",
+        "phone": "Điện thoại",
+        "street": "Tên đường và số nhà",
+        "postalCode": "Mã bưu chính",
+        "city": "Thành phố",
+        "floor": "Tầng / chuông cửa",
+        "notes": "Ghi chú cho đơn hàng",
+        "consent": "Tôi đã đọc và đồng ý với chính sách bảo mật và điều khoản."
+      },
+      "placeholders": {
+        "street": "Musterstraße 1",
+        "postalCode": "10247",
+        "city": "Berlin",
+        "floor": "Tầng 3, bên trái",
+        "notes": "Vui lòng bấm chuông …"
+      },
+      "submit": "Gửi đơn hàng",
+      "submitting": "Đang gửi đơn hàng …",
+      "payLater": "Thanh toán khi nhận món hoặc khi giao hàng.",
+      "paymentSoon": "Thanh toán online bằng thẻ và PayPal sẽ sớm có mặt."
+    },
+    "confirmation": {
+      "title": "Cảm ơn bạn đã đặt món!",
+      "text": "Chúng tôi đã nhận đơn và sẽ bắt tay vào chuẩn bị ngay.",
+      "codeLabel": "Mã đơn hàng",
+      "statusTitle": "Trạng thái",
+      "steps": [
+        "Đã nhận",
+        "Đang nấu",
+        "Hoàn tất",
+        "Đang giao / Sẵn sàng lấy"
+      ],
+      "etaPickup": "Có thể đến lấy khoảng {time}",
+      "etaDelivery": "Dự kiến giao khoảng {time}",
+      "again": "Đặt đơn mới",
+      "demoNote": "Đây là đơn hàng demo. Chưa có giao dịch thanh toán nào được thực hiện."
+    },
+    "errors": {
+      "generic": "Không gửi được đơn hàng. Vui lòng thử lại.",
+      "empty": "Vui lòng thêm ít nhất một món vào giỏ.",
+      "minimum": "Giá trị đơn hàng tối thiểu khi giao hàng là {amount}.",
+      "street": "Vui lòng nhập tên đường và số nhà.",
+      "postalCode": "Vui lòng nhập mã bưu chính hợp lệ.",
+      "city": "Vui lòng nhập tên thành phố.",
+      "time": "Vui lòng chọn thời gian trong giờ mở cửa."
+    }
+  },
+  "galleryPage": {
+    "eyebrow": "Thư viện ảnh",
+    "titleParts": [
+      "Khu vườn",
+      "an yên",
+      "giữa lòng Berlin"
+    ],
+    "highlight": "an yên",
+    "intro": "Một vài khoảnh khắc trong không gian, trên bàn ăn và ở những chi tiết nhỏ làm nên Vegan Garden.",
+    "categories": {
+      "all": "Tất cả",
+      "space": "Không gian",
+      "food": "Món ăn",
+      "details": "Chi tiết",
+      "ingredients": "Nguyên liệu"
+    },
+    "lightboxCount": "{current} / {total}",
+    "zoomHint": "Nhấn để phóng to"
+  },
+  "contactPage": {
+    "eyebrow": "Liên hệ",
+    "title": "Trò chuyện cùng chúng tôi",
+    "intro": "Bạn có câu hỏi về thực đơn, về dị ứng thực phẩm hay muốn tổ chức một buổi tiệc? Chúng tôi luôn sẵn lòng.",
+    "addressLabel": "Địa chỉ",
+    "phoneLabel": "Điện thoại",
+    "emailLabel": "Email",
+    "websiteLabel": "Website",
+    "hoursNote": "Bếp nhận món đến trước giờ đóng cửa 30 phút.",
+    "placeholderNote": "Số điện thoại, email và giờ mở cửa được lấy từ bản thiết kế và sẽ được xác nhận trước khi vận hành chính thức."
+  },
+  "newsletter": {
+    "title": "Bản tin",
+    "text": "Đăng ký nhận bản tin để cập nhật ưu đãi và tin tức mới nhất.",
+    "placeholder": "Địa chỉ email của bạn",
+    "submit": "Đăng ký",
+    "success": "Cảm ơn bạn! Vui lòng xác nhận email trong hộp thư đến.",
+    "error": "Vui lòng nhập email hợp lệ.",
+    "consent": "Bạn có thể huỷ đăng ký bất cứ lúc nào. Xem thêm trong chính sách bảo mật."
+  },
+  "footer": {
+    "description": "Ẩm thực Việt 100 % thuần chay, nấu bằng nguyên liệu tươi, sự tỉnh thức và tình yêu thương.",
+    "quickLinks": "Liên kết nhanh",
+    "connect": "Kết nối với chúng tôi",
+    "connectText": "Theo dõi chúng tôi để cập nhật tin tức, sự kiện và cảm hứng thuần chay.",
+    "contact": "Liên hệ",
+    "rights": "Bảo lưu mọi quyền.",
+    "madeWith": "Được làm cẩn thận tại Berlin."
+  },
+  "notFound": {
+    "title": "Không tìm thấy trang này",
+    "text": "Có thể trang đã được chuyển – mời bạn ghé qua thực đơn của chúng tôi."
+  },
+  "meta": {
+    "home": {
+      "title": "Vegan Garden Berlin – Nhà hàng chay Việt tại Friedrichshain",
+      "description": "Nhà hàng chay Việt 100 % thuần thực vật tại Frankfurter Allee 21, Berlin-Friedrichshain. Phở chay, gỏi cuốn và nhiều món khác. Đặt bàn hoặc đặt món online."
+    },
+    "story": {
+      "title": "Câu chuyện của chúng tôi – Vegan Garden Berlin",
+      "description": "Cội nguồn từ Việt Nam, nuôi dưỡng bởi thiên nhiên: hành trình đưa di sản ẩm thực Việt thành một căn bếp thuần chay giữa Berlin."
+    },
+    "menu": {
+      "title": "Thực đơn – Món chay Việt tại Berlin",
+      "description": "Phở chay, gỏi cuốn, bún chả chay và cà ri – tất cả thuần thực vật, nhiều món không gluten. Xem thực đơn ngay."
+    },
+    "reservation": {
+      "title": "Đặt bàn – Vegan Garden Berlin",
+      "description": "Đặt bàn tại Vegan Garden, Berlin-Friedrichshain chỉ trong chưa đầy một phút."
+    },
+    "order": {
+      "title": "Đặt món online – Vegan Garden Berlin",
+      "description": "Món chay Việt để mang về hoặc giao tận nơi trong khu Friedrichshain. Đặt online ngay."
+    },
+    "gallery": {
+      "title": "Thư viện ảnh – Vegan Garden Berlin",
+      "description": "Khám phá không gian xanh, các món ăn và những chi tiết nhỏ làm nên Vegan Garden."
+    },
+    "contact": {
+      "title": "Liên hệ & Chỉ đường – Vegan Garden Berlin",
+      "description": "Frankfurter Allee 21, 10247 Berlin-Friedrichshain. Giờ mở cửa, chỉ đường và thông tin liên hệ."
+    },
+    "impressum": {
+      "title": "Thông tin pháp lý – Vegan Garden Berlin",
+      "description": "Thông tin nhà cung cấp theo § 5 TMG của Vegan Garden Berlin."
+    },
+    "privacy": {
+      "title": "Chính sách bảo mật – Vegan Garden Berlin",
+      "description": "Thông tin về việc xử lý dữ liệu cá nhân trên vegangarden-berlin.de."
+    },
+    "terms": {
+      "title": "Điều khoản – Vegan Garden Berlin",
+      "description": "Điều khoản chung cho việc đặt bàn và đặt món online tại Vegan Garden Berlin."
+    }
+  },
+  "experience": {
+    "eyebrow": "Trải nghiệm 3D",
+    "title": "Xem món trước khi gọi",
+    "text": "Quét mã để xem các món đặc trưng ở dạng 3D ngay trên bàn – khẩu phần, nguyên liệu và độ cay rõ ràng.",
+    "scan": "Quét bằng camera",
+    "hint": "Chạy thẳng trên trình duyệt, không cần cài app.",
+    "qrAlt": "Mã QR dẫn tới thực đơn Vegan Garden"
+  },
+  "weekdaysShort": {
+    "0": "CN",
+    "1": "T2",
+    "2": "T3",
+    "3": "T4",
+    "4": "T5",
+    "5": "T6",
+    "6": "T7"
+  }
+}
