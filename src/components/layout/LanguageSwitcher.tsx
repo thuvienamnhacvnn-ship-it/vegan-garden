@@ -44,7 +44,9 @@ export function LanguageSwitcher({
               aria-pressed={active}
               title={names[code]}
               className={cn(
-                'flex min-h-11 items-center justify-center rounded-full px-3 text-[0.7rem] font-semibold tracking-[0.1em] transition-colors duration-300 md:min-h-0 md:py-1.5',
+                // px-2 on a phone: three segments at px-3 make the control wide
+                // enough to push the rest of the header off-screen.
+                'flex min-h-11 items-center justify-center rounded-full px-2 text-[0.68rem] font-semibold tracking-[0.06em] transition-colors duration-300 sm:px-3 sm:text-[0.7rem] sm:tracking-[0.1em] md:min-h-0 md:py-1.5',
                 active
                   ? 'bg-gold text-gold-ink'
                   : tone === 'onDark'

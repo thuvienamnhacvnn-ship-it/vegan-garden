@@ -308,9 +308,18 @@
     }
   }
 
-  /* One vertical rhythm for every section on the site. */
+  /* One vertical rhythm for every section on the site.
+     The phone value is deliberately much smaller than the desktop one: 6rem of
+     air top and bottom costs a third of a phone screen per section and turns
+     every page into scrolling. */
   .section {
-    padding-block: 6rem;
+    padding-block: 3.5rem;
+  }
+
+  @media (min-width: 640px) {
+    .section {
+      padding-block: 5.5rem;
+    }
   }
 
   @media (min-width: 768px) {
@@ -326,7 +335,13 @@
   }
 
   .section-tight {
-    padding-block: 4rem;
+    padding-block: 2.75rem;
+  }
+
+  @media (min-width: 640px) {
+    .section-tight {
+      padding-block: 4rem;
+    }
   }
 
   @media (min-width: 768px) {
@@ -402,7 +417,13 @@
   }
 
   .section-pad {
-    padding-block: 4.5rem;
+    padding-block: 3rem;
+  }
+
+  @media (min-width: 640px) {
+    .section-pad {
+      padding-block: 4.5rem;
+    }
   }
 
   @media (min-width: 768px) {

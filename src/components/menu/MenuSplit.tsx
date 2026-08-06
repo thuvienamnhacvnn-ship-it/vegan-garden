@@ -89,7 +89,10 @@ export function MenuSplit({ onAdd }: { onAdd?: (dish: Dish, quantity: number, no
     <>
       <div className="container-page grid gap-6 py-8 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-10">
         {/* ------------------------------------------------------- category rail */}
-        <aside className="lg:sticky lg:top-24 lg:self-start">
+        {/* min-w-0: as a grid child this defaults to min-width:auto, so the
+            category row's `min-w-max` stretched the whole column to 950px and
+            the entire page could be swiped sideways on a phone. */}
+        <aside className="min-w-0 lg:sticky lg:top-24 lg:self-start">
           <h2 className="text-[0.68rem] font-semibold uppercase tracking-[0.22em] text-gold">
             {t('menuPage.filterCategory')}
           </h2>

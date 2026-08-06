@@ -42,7 +42,11 @@ export function HeroBig() {
       aria-label={t('hero.eyebrow')}
       className="bg-band pt-[4.5rem] text-on-band md:pt-20"
     >
-      <div className="grid lg:min-h-[calc(100svh-5rem)] lg:grid-cols-[1.05fr_1fr]">
+      {/* On a phone the hero owns the first screen: header (4.5rem) and tab bar
+          (3.5rem) come off, the photo takes a fixed slice, and the brand block
+          centres itself in whatever is left - so it sits optically in the
+          middle instead of hugging the photo. */}
+      <div className="grid min-h-[calc(100svh-8rem)] grid-rows-[auto_1fr] lg:min-h-[calc(100svh-5rem)] lg:grid-cols-[1.05fr_1fr] lg:grid-rows-1">
         {/* ---------------------------------------------------------- photo */}
         {/* The cell states its own height at every width: `fill` children are
             absolutely positioned, so a grid item holding only an Image has no
@@ -64,7 +68,7 @@ export function HeroBig() {
         {/* A phone gets the brand and the two things it can act on, nothing
             else. The headline and the value row are desktop-only: on a small
             screen they push the buttons below the fold for no gain. */}
-        <div className="order-2 flex flex-col items-center px-6 pb-10 pt-9 text-center lg:hidden">
+        <div className="order-2 flex flex-col items-center justify-center px-6 py-9 text-center lg:hidden">
           <motion.div
             initial={reduced ? false : { opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}

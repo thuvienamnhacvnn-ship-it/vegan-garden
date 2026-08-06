@@ -63,7 +63,7 @@ export function Header() {
             aria-label={t('a11y.logoHome')}
             className="shrink-0 rounded-lg transition-opacity duration-300 hover:opacity-80"
           >
-            <LogoWordmark compact={scrolled} />
+            <LogoWordmark compact={scrolled} responsive />
           </Link>
 
           <nav aria-label={t('a11y.mainNav')} className="hidden xl:block">
@@ -96,19 +96,30 @@ export function Header() {
           </nav>
 
           <div className="flex items-center gap-2.5">
-            <ButtonLink
-              href={`tel:${site.phoneHref}`}
-              variant="secondary"
-              size="sm"
-              className="hidden 2xl:inline-flex"
-              leading={<Phone className="h-3.5 w-3.5" strokeWidth={1.8} />}
-            >
-              {t('common.callUs')}
-            </ButtonLink>
+            {/* Hidden via a wrapper, not a class on the button itself: `cn()`
+                only joins strings, so `hidden` and the button's own
+                `inline-flex` would both survive and the later one wins. The
+                wrapper is `contents` when shown, so it changes no layout. */}
+            <span className="hidden 2xl:contents">
+              <ButtonLink
+                href={`tel:${site.phoneHref}`}
+                variant="secondary"
+                size="sm"
+                leading={<Phone className="h-3.5 w-3.5" strokeWidth={1.8} />}
+              >
+                {t('common.callUs')}
+              </ButtonLink>
+            </span>
 
-            <LanguageSwitcher className="hidden sm:flex" />
+            {/* Language and theme stay reachable on a phone - they used to sit
+                past the right edge, because the wordmark plus five controls is
+                wider than a 390px viewport. The cart is the one that gives way:
+                it has its own tab in the bottom bar on mobile. */}
+            <LanguageSwitcher />
             <ThemeToggle />
-            <CartButton />
+            <span className="hidden lg:contents">
+              <CartButton />
+            </span>
 
             <button
               type="button"

@@ -37,24 +37,41 @@ export function LogoWordmark({
   className,
   compact = false,
   tone = 'default',
+  responsive = false,
 }: {
   className?: string
   compact?: boolean
   tone?: 'default' | 'onDark'
+  /**
+   * Tightens the lockup on small screens. The header needs it: at 390px the
+   * full-size wordmark is 226px wide and pushes the controls off the viewport.
+   */
+  responsive?: boolean
 }) {
   return (
-    <span className={cn('flex items-center gap-3', className)}>
+    <span className={cn('flex items-center', responsive ? 'gap-2 sm:gap-3' : 'gap-3', className)}>
       <Logo
         variant="mark"
         priority
         alt=""
-        className={cn('w-auto transition-all duration-500', compact ? 'h-8' : 'h-9 md:h-10')}
+        className={cn(
+          'w-auto transition-all duration-500',
+          compact ? 'h-8' : responsive ? 'h-8 sm:h-9 md:h-10' : 'h-9 md:h-10'
+        )}
       />
       <span
         className={cn(
-          'whitespace-nowrap font-display font-light tracking-[0.18em] transition-all duration-500',
+          'whitespace-nowrap font-display font-light transition-all duration-500',
           tone === 'onDark' ? 'text-ink-inverse' : 'text-ink',
-          compact ? 'text-base md:text-lg' : 'text-lg md:text-xl'
+          // Below `sm` the wordmark is dropped and the lotus carries the brand.
+          // The header has to fit language, theme and menu at 360px, and the
+          // name is on screen anyway - the hero states it in full.
+          responsive ? 'hidden tracking-[0.12em] sm:inline sm:tracking-[0.18em]' : 'tracking-[0.18em]',
+          compact
+            ? 'text-base md:text-lg'
+            : responsive
+              ? 'text-[0.95rem] sm:text-lg md:text-xl'
+              : 'text-lg md:text-xl'
         )}
       >
         VEGAN GARDEN
