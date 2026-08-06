@@ -54,8 +54,10 @@ export function Header() {
       >
         <div
           className={cn(
-            'container-page flex items-center justify-between gap-6 transition-[height] duration-300',
-            scrolled ? 'h-16' : 'h-[4.5rem] md:h-20'
+            // 56px on a phone, not 72: the header is chrome, and every pixel
+            // it takes comes straight out of the banner below it.
+            'container-page flex items-center justify-between gap-4 transition-[height] duration-300 sm:gap-6',
+            scrolled ? 'h-12 sm:h-16' : 'h-14 sm:h-[4.5rem] md:h-20'
           )}
         >
           <Link

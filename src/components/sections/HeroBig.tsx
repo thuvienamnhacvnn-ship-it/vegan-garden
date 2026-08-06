@@ -40,18 +40,18 @@ export function HeroBig() {
   return (
     <section
       aria-label={t('hero.eyebrow')}
-      className="bg-band pt-[4.5rem] text-on-band md:pt-20"
+      className="bg-band pt-14 text-on-band sm:pt-[4.5rem] md:pt-20"
     >
       {/* On a phone the hero owns the first screen: header (4.5rem) and tab bar
           (3.5rem) come off, the photo takes a fixed slice, and the brand block
           centres itself in whatever is left - so it sits optically in the
           middle instead of hugging the photo. */}
-      <div className="grid min-h-[calc(100svh-8rem)] grid-rows-[auto_1fr] lg:min-h-[calc(100svh-5rem)] lg:grid-cols-[1.05fr_1fr] lg:grid-rows-1">
+      <div className="grid min-h-[calc(100svh-7rem)] grid-rows-[auto_1fr] lg:min-h-[calc(100svh-5rem)] lg:grid-cols-[1.05fr_1fr] lg:grid-rows-1">
         {/* ---------------------------------------------------------- photo */}
         {/* The cell states its own height at every width: `fill` children are
             absolutely positioned, so a grid item holding only an Image has no
             content height of its own to stretch from. */}
-        <div className="relative order-1 h-[38svh] sm:h-[46svh] lg:order-2 lg:h-full lg:min-h-[calc(100svh-5rem)]">
+        <div className="relative order-1 h-[43svh] sm:h-[48svh] lg:order-2 lg:h-full lg:min-h-[calc(100svh-5rem)]">
           <Image
             src="/images/hero/hero-signature-bowl.jpg"
             alt={copy?.alt ?? ''}
