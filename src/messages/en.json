@@ -11,6 +11,12 @@
     "privacy": "Privacy",
     "terms": "Terms"
   },
+  "tabs": {
+    "home": "Home",
+    "menu": "Menu",
+    "reserve": "Table",
+    "cart": "Cart"
+  },
   "common": {
     "viewMenu": "View the menu",
     "viewFullMenu": "Full menu",

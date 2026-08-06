@@ -8,6 +8,7 @@ import { Minus, Plus, Trash2, X, StickyNote } from 'lucide-react'
 import { useCart, useCartItems } from './CartProvider'
 import { useLocale } from '@/i18n/LocaleProvider'
 import { useScrollLock } from '@/hooks/useScrollLock'
+import { useIsHandset } from '@/hooks/useMediaQuery'
 import { formatPrice, cn } from '@/lib/format'
 import { site } from '@/data/site'
 import { dishes } from '@/data/menu'
@@ -21,6 +22,9 @@ export function CartDrawer() {
   const items = useCartItems()
   const { t, locale, pick } = useLocale()
   const reduced = useReducedMotion()
+  // On a phone the cart is a bottom sheet you can flick away; on a laptop it
+  // stays the side drawer, where a downward drag would mean nothing.
+  const sheet = useIsHandset()
   const panelRef = useRef<HTMLDivElement>(null)
   const closeRef = useRef<HTMLButtonElement>(null)
   const [noteFor, setNoteFor] = useState<string | null>(null)
@@ -79,12 +83,33 @@ export function CartDrawer() {
             role="dialog"
             aria-modal="true"
             aria-label={t('orderPage.cart.title')}
-            initial={reduced ? { opacity: 0 } : { x: '100%' }}
-            animate={reduced ? { opacity: 1 } : { x: 0 }}
-            exit={reduced ? { opacity: 0 } : { x: '100%' }}
+            initial={reduced ? { opacity: 0 } : sheet ? { y: '100%' } : { x: '100%' }}
+            animate={reduced ? { opacity: 1 } : { x: 0, y: 0 }}
+            exit={reduced ? { opacity: 0 } : sheet ? { y: '100%' } : { x: '100%' }}
             transition={{ duration: reduced ? 0.2 : 0.5, ease: EASE }}
-            className="absolute right-0 top-0 flex h-full w-full max-w-md flex-col border-l border-gold/25 bg-charcoal"
+            drag={sheet && !reduced ? 'y' : false}
+            dragConstraints={{ top: 0, bottom: 0 }}
+            dragElastic={{ top: 0, bottom: 0.4 }}
+            onDragEnd={(_, info) => {
+              // A short flick counts as much as a long drag, which is what
+              // makes it feel native rather than like a resizable box.
+              if (info.offset.y > 130 || info.velocity.y > 650) close()
+            }}
+            className={cn(
+              'absolute flex flex-col bg-charcoal',
+              sheet
+                ? 'inset-x-0 bottom-0 max-h-[88svh] rounded-t-[var(--radius-xl)] border-t border-gold/25'
+                : 'right-0 top-0 h-full w-full max-w-md border-l border-gold/25'
+            )}
           >
+            {/* grab handle - the affordance that says "you can drag this" */}
+            {sheet ? (
+              <span
+                aria-hidden="true"
+                className="mx-auto mt-3 h-1 w-10 shrink-0 rounded-full bg-cream-dim/35"
+              />
+            ) : null}
+
             <header className="flex items-center justify-between border-b border-gold/20 px-6 py-5">
               <div>
                 <h2 className="font-display text-2xl text-cream">
@@ -151,7 +176,7 @@ export function CartDrawer() {
                                 type="button"
                                 aria-label={t('a11y.decrease')}
                                 onClick={() => setQuantity(item.dishId, item.quantity - 1)}
-                                className="flex h-9 w-9 items-center justify-center text-gold transition-colors hover:bg-gold/10"
+                                className="flex h-11 w-11 items-center justify-center text-gold transition-colors hover:bg-gold/10 md:h-9 md:w-9"
                               >
                                 <Minus className="h-3.5 w-3.5" strokeWidth={1.6} />
                               </button>
@@ -162,7 +187,7 @@ export function CartDrawer() {
                                 type="button"
                                 aria-label={t('a11y.increase')}
                                 onClick={() => setQuantity(item.dishId, item.quantity + 1)}
-                                className="flex h-9 w-9 items-center justify-center text-gold transition-colors hover:bg-gold/10"
+                                className="flex h-11 w-11 items-center justify-center text-gold transition-colors hover:bg-gold/10 md:h-9 md:w-9"
                               >
                                 <Plus className="h-3.5 w-3.5" strokeWidth={1.6} />
                               </button>

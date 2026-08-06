@@ -31,7 +31,7 @@ export function SocialLinks({
               title={network.label}
               className={cn(
                 'inline-flex items-center justify-center rounded-full border transition-colors duration-300',
-                size === 'sm' ? 'h-9 w-9' : 'h-10 w-10',
+                size === 'sm' ? 'h-11 w-11 md:h-9 md:w-9' : 'h-11 w-11 md:h-10 md:w-10',
                 tone === 'onDark'
                   ? 'border-ink-inverse/35 text-ink-inverse hover:border-gold hover:bg-gold hover:text-gold-ink'
                   : 'border-line-strong text-ink hover:border-gold hover:bg-gold hover:text-gold-ink'

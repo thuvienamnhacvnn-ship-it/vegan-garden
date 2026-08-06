@@ -44,7 +44,7 @@ export function LanguageSwitcher({
               aria-pressed={active}
               title={names[code]}
               className={cn(
-                'rounded-full px-3 py-1.5 text-[0.7rem] font-semibold tracking-[0.1em] transition-colors duration-300',
+                'flex min-h-11 items-center justify-center rounded-full px-3 text-[0.7rem] font-semibold tracking-[0.1em] transition-colors duration-300 md:min-h-0 md:py-1.5',
                 active
                   ? 'bg-gold text-gold-ink'
                   : tone === 'onDark'

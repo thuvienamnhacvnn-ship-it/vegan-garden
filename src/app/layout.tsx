@@ -14,8 +14,17 @@ export const metadata: Metadata = {
   creator: 'Vegan Garden Berlin',
   robots: { index: true, follow: true },
   icons: {
-    icon: [{ url: '/logo/vegan-garden-mark.svg', type: 'image/svg+xml' }],
-    apple: [{ url: '/logo/vegan-garden-mark.svg' }],
+    icon: [
+      { url: '/logo/vegan-garden-mark.svg', type: 'image/svg+xml' },
+      { url: '/icons/favicon-48.png', sizes: '48x48', type: 'image/png' },
+    ],
+    apple: [{ url: '/icons/apple-touch-icon.png', sizes: '180x180' }],
+  },
+  // Lets iOS run the site full-screen once it is added to the home screen.
+  appleWebApp: {
+    capable: true,
+    title: 'Vegan Garden',
+    statusBarStyle: 'black-translucent',
   },
 }
 

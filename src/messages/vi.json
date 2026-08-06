@@ -11,6 +11,12 @@
     "privacy": "Chính sách bảo mật",
     "terms": "Điều khoản"
   },
+  "tabs": {
+    "home": "Trang chủ",
+    "menu": "Thực đơn",
+    "reserve": "Đặt bàn",
+    "cart": "Giỏ hàng"
+  },
   "common": {
     "viewMenu": "Xem thực đơn",
     "viewFullMenu": "Xem toàn bộ thực đơn",

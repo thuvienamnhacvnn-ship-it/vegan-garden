@@ -9,6 +9,8 @@ import { PageTransition } from './PageTransition'
 import { SmoothScroll } from './SmoothScroll'
 import { LoadingScreen } from './LoadingScreen'
 import { CustomCursor } from './CustomCursor'
+import { BottomNav } from './BottomNav'
+import { ServiceWorker } from './ServiceWorker'
 
 /**
  * Header, footer, cart and momentum scrolling. Only the public site uses this -
@@ -21,14 +23,18 @@ import { CustomCursor } from './CustomCursor'
 export function SiteChrome({ children }: { children: ReactNode }) {
   return (
     <CartProvider>
+      <ServiceWorker />
       <LoadingScreen />
       <CustomCursor />
       <SmoothScroll />
       <Header />
-      <main id="main">
+      {/* The padding matches the tab bar's height plus the iOS safe area, so
+          the last section of any page clears it instead of hiding beneath. */}
+      <main id="main" className="pb-[calc(3.5rem+env(safe-area-inset-bottom))] lg:pb-0">
         <PageTransition>{children}</PageTransition>
       </main>
       <Footer />
+      <BottomNav />
       <CartDrawer />
     </CartProvider>
   )

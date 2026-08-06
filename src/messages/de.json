@@ -11,6 +11,12 @@
     "privacy": "Datenschutz",
     "terms": "AGB"
   },
+  "tabs": {
+    "home": "Start",
+    "menu": "Karte",
+    "reserve": "Tisch",
+    "cart": "Warenkorb"
+  },
   "common": {
     "viewMenu": "Speisekarte ansehen",
     "viewFullMenu": "Ganze Speisekarte",

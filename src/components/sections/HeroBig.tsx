@@ -47,7 +47,7 @@ export function HeroBig() {
         {/* The cell states its own height at every width: `fill` children are
             absolutely positioned, so a grid item holding only an Image has no
             content height of its own to stretch from. */}
-        <div className="relative order-1 h-[46svh] sm:h-[54svh] lg:order-2 lg:h-full lg:min-h-[calc(100svh-5rem)]">
+        <div className="relative order-1 h-[38svh] sm:h-[46svh] lg:order-2 lg:h-full lg:min-h-[calc(100svh-5rem)]">
           <Image
             src="/images/hero/hero-signature-bowl.jpg"
             alt={copy?.alt ?? ''}
@@ -60,8 +60,48 @@ export function HeroBig() {
           />
         </div>
 
-        {/* ----------------------------------------------------------- type */}
-        <div className="order-2 flex flex-col justify-center px-6 py-14 md:px-10 lg:order-1 lg:py-20 xl:px-16 2xl:px-24">
+        {/* ------------------------------------------------- type · mobile */}
+        {/* A phone gets the brand and the two things it can act on, nothing
+            else. The headline and the value row are desktop-only: on a small
+            screen they push the buttons below the fold for no gain. */}
+        <div className="order-2 flex flex-col items-center px-6 pb-10 pt-9 text-center lg:hidden">
+          <motion.div
+            initial={reduced ? false : { opacity: 0, y: 18 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: EASE }}
+            className="flex flex-col items-center"
+          >
+            <Logo variant="mark" priority alt="" className="h-16 w-auto" />
+            <p className="mt-4 font-display text-[1.6rem] font-light tracking-[0.2em] text-on-band">
+              VEGAN GARDEN
+            </p>
+            <p className="mt-2 text-[0.66rem] font-semibold uppercase tracking-[0.22em] text-gold-band">
+              {t('hero.badge')}
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={reduced ? false : { opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.25, ease: EASE }}
+            className="mt-8 flex w-full max-w-xs flex-col gap-3"
+          >
+            <ButtonLink
+              href="/menu"
+              size="lg"
+              className="w-full"
+              trailing={<ArrowUpRight className="h-4 w-4" strokeWidth={2} />}
+            >
+              {t('common.viewMenu')}
+            </ButtonLink>
+            <ButtonLink href="/reservation" variant="onBand" size="lg" className="w-full">
+              {t('common.reserveTable')}
+            </ButtonLink>
+          </motion.div>
+        </div>
+
+        {/* ------------------------------------------------ type · desktop */}
+        <div className="order-2 hidden flex-col justify-center px-6 py-14 md:px-10 lg:order-1 lg:flex lg:py-20 xl:px-16 2xl:px-24">
           <motion.div
             initial={reduced ? false : { opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}

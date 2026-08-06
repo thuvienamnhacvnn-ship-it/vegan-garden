@@ -7,6 +7,7 @@ import { X, Minus, Plus } from 'lucide-react'
 import type { Dish } from '@/types'
 import { useLocale } from '@/i18n/LocaleProvider'
 import { useScrollLock } from '@/hooks/useScrollLock'
+import { useIsHandset } from '@/hooks/useMediaQuery'
 import { formatPrice } from '@/lib/format'
 import { Button, ButtonLink } from '@/components/ui/Button'
 import { Badge } from '@/components/ui/Section'
@@ -30,6 +31,9 @@ export function DishDrawer({
 }) {
   const { t, pick, locale } = useLocale()
   const reduced = useReducedMotion()
+  // Below `sm` this is a bottom sheet; above it, a side panel that must not
+  // slide away when the guest scrolls its content.
+  const sheet = useIsHandset()
   const panelRef = useRef<HTMLDivElement>(null)
   const closeRef = useRef<HTMLButtonElement>(null)
   const restoreRef = useRef<HTMLElement | null>(null)
@@ -105,8 +109,22 @@ export function DishDrawer({
             animate={reduced ? { opacity: 1 } : { y: 0, x: 0 }}
             exit={reduced ? { opacity: 0 } : { y: '100%' }}
             transition={{ duration: reduced ? 0.2 : 0.45, ease: EASE }}
+            drag={sheet && !reduced ? 'y' : false}
+            dragConstraints={{ top: 0, bottom: 0 }}
+            dragElastic={{ top: 0, bottom: 0.4 }}
+            onDragEnd={(_, info) => {
+              if (info.offset.y > 130 || info.velocity.y > 650) onClose()
+            }}
             className="relative flex max-h-[92svh] w-full flex-col overflow-hidden rounded-t-[var(--radius-xl)] border border-line bg-card sm:max-h-none sm:h-full sm:max-w-lg sm:rounded-none sm:rounded-l-[var(--radius-xl)] sm:border-l"
           >
+            {/* grab handle - only where the panel is actually draggable */}
+            {sheet ? (
+              <span
+                aria-hidden="true"
+                className="absolute inset-x-0 top-3 z-10 mx-auto h-1 w-10 rounded-full bg-ink-subtle/40"
+              />
+            ) : null}
+
             <button
               ref={closeRef}
               type="button"
