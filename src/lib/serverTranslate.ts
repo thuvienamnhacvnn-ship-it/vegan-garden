@@ -1,12 +1,16 @@
 import de from '@/messages/de.json'
+import en from '@/messages/en.json'
 import vi from '@/messages/vi.json'
+import { DEFAULT_LOCALE, LOCALES, type Locale } from '@/types'
 
 /**
  * Message lookup for route handlers, so API validation errors come back in the
  * visitor's language without pulling the React provider into the server bundle.
  */
+const trees: Record<Locale, unknown> = { de, en, vi }
+
 export function serverTranslate(locale: string) {
-  const tree = locale === 'vi' ? vi : de
+  const tree = trees[locale as Locale] ?? de
 
   return (path: string, vars?: Record<string, string | number>) => {
     const value = path.split('.').reduce<unknown>((node, key) => {
@@ -23,7 +27,7 @@ export function serverTranslate(locale: string) {
   }
 }
 
-export function localeFromBody(body: unknown): 'de' | 'vi' {
-  if (body && typeof body === 'object' && (body as { locale?: string }).locale === 'vi') return 'vi'
-  return 'de'
+export function localeFromBody(body: unknown): Locale {
+  const sent = (body as { locale?: string } | null)?.locale
+  return LOCALES.includes(sent as Locale) ? (sent as Locale) : DEFAULT_LOCALE
 }

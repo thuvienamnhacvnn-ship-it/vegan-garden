@@ -4,18 +4,22 @@ import { openingHoursSpecification } from './hours'
 import { dishes } from '@/data/menu'
 import { averageRating, reviews } from '@/data/reviews'
 import de from '@/messages/de.json'
+import en from '@/messages/en.json'
 import vi from '@/messages/vi.json'
 
 type MetaKey = keyof typeof de.meta
 
 /**
- * Builds bilingual metadata for a page. German is the primary language, the
- * Vietnamese title/description ride along in `alternates` and Open Graph so
- * both versions are discoverable.
+ * Builds trilingual metadata for a page. German is the primary language; the
+ * English and Vietnamese versions ride along in `alternates` and Open Graph so
+ * all three are discoverable.
+ *
+ * Every language answers on the same URL - the switch is client-side, not a
+ * routed prefix - so each `hreflang` points at that one canonical address.
  */
 export function pageMetadata(key: MetaKey, path: string): Metadata {
   const deMeta = de.meta[key]
-  const viMeta = vi.meta[key]
+  const enMeta = en.meta[key]
   const url = `${siteUrl}${path}`
 
   return {
@@ -34,6 +38,7 @@ export function pageMetadata(key: MetaKey, path: string): Metadata {
       canonical: url,
       languages: {
         'de-DE': url,
+        'en-GB': url,
         'vi-VN': url,
         'x-default': url,
       },
@@ -45,13 +50,13 @@ export function pageMetadata(key: MetaKey, path: string): Metadata {
       title: deMeta.title,
       description: deMeta.description,
       locale: 'de_DE',
-      alternateLocale: ['vi_VN'],
+      alternateLocale: ['en_GB', 'vi_VN'],
       images: [
         {
           url: `${siteUrl}/images/hero/hero-signature-bowl.jpg`,
           width: 1378,
           height: 2200,
-          alt: viMeta.title,
+          alt: enMeta.title,
         },
       ],
     },

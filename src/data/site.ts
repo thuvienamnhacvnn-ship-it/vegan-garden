@@ -13,6 +13,7 @@ export const site = {
   legalName: 'Vegan Garden Berlin',
   tagline: {
     de: 'Die Kunst der Reinheit und des Friedens',
+    en: 'The Art of Purity and Peace',
     vi: 'Nghệ thuật của sự thanh khiết và an yên',
   } satisfies Localized,
 

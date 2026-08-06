@@ -64,8 +64,12 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
 
     if (isLocale(stored)) {
       setLocaleState(stored)
-    } else if (typeof navigator !== 'undefined' && navigator.language?.toLowerCase().startsWith('vi')) {
-      setLocaleState('vi')
+    } else if (typeof navigator !== 'undefined') {
+      // No stored choice: honour the browser for the two non-default languages
+      // and leave everyone else on German, the language of the neighbourhood.
+      const tag = navigator.language?.toLowerCase() ?? ''
+      if (tag.startsWith('vi')) setLocaleState('vi')
+      else if (tag.startsWith('en')) setLocaleState('en')
     }
     setReady(true)
   }, [])

@@ -1,0 +1,573 @@
+{
+  "nav": {
+    "home": "Home",
+    "story": "Our Story",
+    "menu": "Menu",
+    "reservation": "Reservations",
+    "order": "Order Online",
+    "gallery": "Gallery",
+    "contact": "Contact",
+    "impressum": "Legal Notice",
+    "privacy": "Privacy",
+    "terms": "Terms"
+  },
+  "common": {
+    "viewMenu": "View the menu",
+    "viewFullMenu": "Full menu",
+    "reserveTable": "Reserve a table",
+    "reserveNow": "Reserve now",
+    "orderOnline": "Order online",
+    "viewGallery": "View gallery",
+    "readMore": "Read more",
+    "details": "View details",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "loading": "Loading …",
+    "sending": "Sending …",
+    "all": "All",
+    "from": "from",
+    "search": "Search",
+    "clear": "Reset",
+    "callUs": "Call us",
+    "directions": "Directions",
+    "addToCart": "Add to cart",
+    "required": "Required",
+    "optional": "optional",
+    "yes": "Yes",
+    "no": "No",
+    "seeAll": "See all",
+    "goHome": "Back to home",
+    "openingHours": "Opening hours",
+    "findUs": "Find us",
+    "today": "Today",
+    "closed": "Closed",
+    "openNow": "Open now",
+    "closedNow": "Currently closed"
+  },
+  "a11y": {
+    "skipToContent": "Skip to content",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "openCart": "Open cart",
+    "closeCart": "Close cart",
+    "switchLanguage": "Change language",
+    "currentLanguage": "Current language",
+    "sliderPause": "Pause slideshow",
+    "sliderPlay": "Play slideshow",
+    "previousSlide": "Previous slide",
+    "nextSlide": "Next slide",
+    "goToSlide": "Go to slide {n}",
+    "previousImage": "Previous image",
+    "nextImage": "Next image",
+    "zoomImage": "Enlarge image",
+    "logoHome": "Vegan Garden – back to home",
+    "socialLink": "Vegan Garden on {network}",
+    "increase": "Increase quantity",
+    "decrease": "Decrease quantity",
+    "remove": "Remove",
+    "themeNight": "Switch to night mode",
+    "themeDay": "Switch to day mode",
+    "mainNav": "Main navigation"
+  },
+  "weekdays": {
+    "0": "Sunday",
+    "1": "Monday",
+    "2": "Tuesday",
+    "3": "Wednesday",
+    "4": "Thursday",
+    "5": "Friday",
+    "6": "Saturday"
+  },
+  "hero": {
+    "eyebrow": "Vegan Vietnamese restaurant · Berlin Friedrichshain",
+    "badge": "100 % Vegan",
+    "scroll": "Discover",
+    "slides": [
+      {
+        "titleLines": [
+          "The Art of",
+          "Purity and Peace"
+        ],
+        "subtitle": "100 % vegan Vietnamese cuisine",
+        "text": "Fresh ingredients. Mindful living. A better tomorrow.",
+        "alt": "Vegan Vietnamese bowl with grilled tofu, herbs and lime"
+      },
+      {
+        "titleLines": [
+          "Rooted in Vietnam.",
+          "Nourished by nature."
+        ],
+        "subtitle": "Authentic recipes, reimagined with plants",
+        "text": "Every plate is made with care, fresh ingredients and a lot of love.",
+        "alt": "Warm dining room with wooden tables, plants and rattan lamps"
+      },
+      {
+        "titleLines": [
+          "A garden of peace",
+          "in the heart of Berlin"
+        ],
+        "subtitle": "A quiet retreat in Friedrichshain",
+        "text": "Lush green, warm wood and soft daylight – simply breathe out.",
+        "alt": "Large window front with green plants in the Vegan Garden dining room"
+      },
+      {
+        "titleLines": [
+          "Good food,",
+          "good mood, good world."
+        ],
+        "subtitle": "Evening mood at Vegan Garden",
+        "text": "Candlelight, Vietnamese flavours and time for the people who matter.",
+        "alt": "Tables laid for the evening with candles at Vegan Garden"
+      }
+    ]
+  },
+  "brandBar": {
+    "items": [
+      {
+        "title": "100 % Vegan",
+        "text": "No animal products. Just pure, plant-based cooking."
+      },
+      {
+        "title": "Fresh Ingredients",
+        "text": "Seasonal, natural ingredients – fresh every day."
+      },
+      {
+        "title": "Vietnamese Heritage",
+        "text": "Authentic recipes from Vietnam, made with love and tradition."
+      },
+      {
+        "title": "Sustainable Living",
+        "text": "We care for the earth the way we care for you."
+      },
+      {
+        "title": "Mindful Dining",
+        "text": "Good food for a good mind and a good life."
+      }
+    ]
+  },
+  "storyTeaser": {
+    "eyebrow": "Our Story",
+    "titleLines": [
+      "Rooted in Vietnam.",
+      "Nourished by nature."
+    ],
+    "paragraphs": [
+      "Vegan Garden is more than a restaurant – it is a journey through flavour, mindfulness and compassion.",
+      "Inspired by the rich culinary heritage of Vietnam, we cook 100 % plant-based, with fresh, natural ingredients that bring balance to your body and calm to your mind."
+    ],
+    "script": "The Art of Purity and Peace",
+    "quote": "We believe that food has the power to heal, to connect and to create a better world for all.",
+    "imageAlt": "Vegan Garden dining room with wooden tables and the golden lotus logo on the wall"
+  },
+  "commitment": {
+    "title": "Our Commitment to You",
+    "subtitle": "Five values that stand on every plate"
+  },
+  "signature": {
+    "eyebrow": "Signature Dishes",
+    "titleParts": [
+      "Fine vegan",
+      "Vietnamese",
+      "cuisine"
+    ],
+    "highlight": "vegan",
+    "paragraphs": [
+      "Our signature dishes celebrate authentic Vietnamese flavours, reimagined with plants.",
+      "Every plate is crafted with care, fresh ingredients and a touch of love."
+    ],
+    "bestseller": "Bestseller"
+  },
+  "quoteBand": {
+    "motto": [
+      "Good food, good mood,",
+      "good world."
+    ],
+    "quote": "Let food be thy medicine and medicine be thy food.",
+    "author": "Hippocrates",
+    "ctaTitle": "Ready for the art of purity?",
+    "cta": "Reserve a table"
+  },
+  "whyUs": {
+    "eyebrow": "Why Vegan Garden",
+    "title": "A restaurant that nourishes – not just fills",
+    "text": "From the first scent of the broth to the last sip of tea, we want you to feel completely at ease.",
+    "items": [
+      {
+        "title": "Kitchen full of handwork",
+        "text": "Our broths simmer for hours, rice paper is rolled fresh, sauces are made new every day."
+      },
+      {
+        "title": "Honest ingredients",
+        "text": "Seasonal vegetables, tofu from a Berlin producer and herbs we source fresh each morning."
+      },
+      {
+        "title": "A calm dining room",
+        "text": "Plenty of green, warm wood and soft light – a place where you truly arrive."
+      },
+      {
+        "title": "Made for everyone",
+        "text": "Gluten-free and nut-free options, mild and spicy dishes – just let us know."
+      }
+    ]
+  },
+  "galleryPreview": {
+    "eyebrow": "Our Space",
+    "titleParts": [
+      "A garden of",
+      "peace",
+      "in the heart of Berlin"
+    ],
+    "highlight": "peace",
+    "paragraphs": [
+      "Step into a space where nature meets pleasure. Our restaurant is a peaceful retreat from the rush of the city.",
+      "Surrounded by lush green, warm wood and soft daylight, every detail invites you to slow down, breathe and enjoy the moment."
+    ]
+  },
+  "reviews": {
+    "eyebrow": "Guest Voices",
+    "title": "What our guests say",
+    "subtitle": "Real feedback from people who have sat at our tables.",
+    "ratingLabel": "{rating} out of 5 stars"
+  },
+  "reservationCta": {
+    "eyebrow": "Reservations",
+    "title": "We look forward to your visit",
+    "text": "A relaxed dinner, a family gathering or a special occasion – reserve your table in seconds.",
+    "note": "For groups of 8 or more, please give us a call."
+  },
+  "contactBlock": {
+    "eyebrow": "Visit us",
+    "titleParts": [
+      "We can hardly wait",
+      "to welcome",
+      "you"
+    ],
+    "highlight": "to welcome",
+    "paragraphs": [
+      "Whether it is a relaxed dinner, a family gathering or a special celebration – we make sure your visit stays in your memory.",
+      "Come as you are, and leave nourished."
+    ],
+    "script": "Open daily to nourish you.",
+    "mapTitle": "Vegan Garden on Google Maps",
+    "quickReservation": "Reserve a table",
+    "confirmationNote": "You will receive a confirmation by e-mail."
+  },
+  "menuPage": {
+    "eyebrow": "Menu",
+    "titleParts": [
+      "Fine vegan",
+      "Vietnamese",
+      "cuisine"
+    ],
+    "highlight": "vegan",
+    "intro": "Every dish is 100 % plant-based. We cook without meat, fish, egg or dairy – and with all the more herbs, spices and patience.",
+    "searchPlaceholder": "Search for a dish …",
+    "filterCategory": "Category",
+    "filterDiet": "Filter",
+    "resultCount": "{count} dishes",
+    "resultCountOne": "1 dish",
+    "empty": "We could not find a dish for this selection.",
+    "emptyHint": "Reset the filters or search for something else.",
+    "categories": {
+      "all": "All dishes",
+      "starters": "Starters",
+      "soups": "Soups",
+      "noodles": "Noodles",
+      "rice": "Rice",
+      "mains": "Mains",
+      "desserts": "Desserts",
+      "drinks": "Drinks"
+    },
+    "tags": {
+      "vegan": "Vegan",
+      "glutenFree": "Gluten-free",
+      "spicy": "Spicy",
+      "bestseller": "Bestseller",
+      "new": "New",
+      "nutFree": "Nut-free"
+    },
+    "spice": {
+      "label": "Heat",
+      "mild": "Mild",
+      "medium": "Medium",
+      "hot": "Hot"
+    },
+    "filters": {
+      "glutenFree": "Gluten-free",
+      "spicy": "Spicy",
+      "mild": "Mild",
+      "bestseller": "Bestseller"
+    },
+    "modal": {
+      "ingredients": "Ingredients",
+      "allergens": "Allergens",
+      "close": "Close details"
+    },
+    "plantBased": "Plant-based",
+    "allergyNote": "Do you have an allergy or intolerance? Talk to us – we can adapt almost every dish."
+  },
+  "reservationPage": {
+    "eyebrow": "Reservations",
+    "title": "Your table at Vegan Garden",
+    "intro": "Reserve in under a minute. You will get your reservation code right after sending.",
+    "formTitle": "Reserve a table",
+    "sideTitle": "Good to know",
+    "sideItems": [
+      "We hold your table for 15 minutes past the reserved time.",
+      "For groups of 8 or more, please give us a quick call.",
+      "Gluten-free, nut-free and mild versions are possible for almost every dish.",
+      "High chairs and step-free access are available."
+    ],
+    "fields": {
+      "date": "Date",
+      "time": "Time",
+      "guests": "Number of guests",
+      "name": "Your name",
+      "email": "E-mail address",
+      "phone": "Phone number",
+      "notes": "Special request",
+      "allergies": "Allergies / intolerances",
+      "consent": "I have read the privacy policy and agree to the processing of my data."
+    },
+    "placeholders": {
+      "date": "Choose a date",
+      "time": "Choose a time",
+      "guests": "Number of guests",
+      "name": "First and last name",
+      "email": "name@example.com",
+      "phone": "+49 …",
+      "notes": "Window seat, birthday, high chair …",
+      "allergies": "e.g. peanut, gluten, soy"
+    },
+    "guestsOption": "{n} guests",
+    "guestsOptionOne": "1 guest",
+    "guestsMore": "More than {n} guests? Please give us a call.",
+    "submit": "Reserve now",
+    "submitting": "Sending reservation …",
+    "success": {
+      "title": "Thank you, your table is noted!",
+      "text": "We have received your request and will confirm it by e-mail shortly.",
+      "codeLabel": "Your reservation code",
+      "summary": "Summary",
+      "again": "Another reservation"
+    },
+    "errors": {
+      "generic": "The reservation could not be sent. Please try again or give us a call.",
+      "date": "Please choose a date.",
+      "datePast": "Please choose a date in the future.",
+      "dateHorizon": "Reservations are possible up to {days} days in advance.",
+      "time": "Please choose a time.",
+      "timeClosed": "We are closed at that time.",
+      "timePast": "That time is already in the past.",
+      "guests": "Please tell us the number of guests.",
+      "guestsMax": "For more than {max} guests, please give us a call.",
+      "name": "Please tell us your name.",
+      "nameShort": "That name is too short.",
+      "email": "Please enter a valid e-mail address.",
+      "phone": "Please enter a valid phone number.",
+      "notesLong": "Please keep it a little shorter (max. 500 characters).",
+      "consent": "Please agree to the privacy policy."
+    }
+  },
+  "orderPage": {
+    "eyebrow": "Order Online",
+    "title": "Vegan Garden at home",
+    "intro": "Choose your favourite dishes, pick them up yourself or have them delivered.",
+    "addNote": "Add a note",
+    "noteLabel": "Note for the kitchen",
+    "notePlaceholder": "e.g. no coriander, extra spicy",
+    "saveNote": "Save",
+    "added": "{name} was added",
+    "cart": {
+      "title": "Your order",
+      "empty": "Your cart is still empty.",
+      "emptyHint": "Browse the menu and add your favourite dishes.",
+      "browse": "Go to the menu",
+      "subtotal": "Subtotal",
+      "deliveryFee": "Delivery fee",
+      "free": "Free",
+      "total": "Total",
+      "checkout": "Checkout",
+      "continue": "Keep ordering",
+      "itemCount": "{count} items",
+      "itemCountOne": "1 item",
+      "clear": "Empty the cart",
+      "freeDeliveryHint": "{amount} to go until free delivery.",
+      "minimumHint": "Minimum order value for delivery: {amount}."
+    },
+    "checkout": {
+      "title": "Checkout",
+      "methodTitle": "Pickup or delivery",
+      "pickup": "Pickup",
+      "pickupHint": "Frankfurter Allee 21, 10247 Berlin",
+      "delivery": "Delivery",
+      "deliveryHint": "In Friedrichshain and neighbouring areas",
+      "timeTitle": "Preferred time",
+      "timeAsap": "As soon as possible",
+      "timeScheduled": "Choose a time",
+      "contactTitle": "Your contact details",
+      "addressTitle": "Delivery address",
+      "summaryTitle": "Summary",
+      "fields": {
+        "name": "Name",
+        "email": "E-mail",
+        "phone": "Phone",
+        "street": "Street and house number",
+        "postalCode": "Postcode",
+        "city": "City",
+        "floor": "Floor / doorbell",
+        "notes": "Note on the order",
+        "consent": "I have read and accept the privacy policy and the terms."
+      },
+      "placeholders": {
+        "street": "Musterstraße 1",
+        "postalCode": "10247",
+        "city": "Berlin",
+        "floor": "3rd floor, left",
+        "notes": "Please ring at …"
+      },
+      "submit": "Place the order",
+      "submitting": "Sending order …",
+      "payLater": "Payment is made on pickup or delivery.",
+      "paymentSoon": "Online payment by card and PayPal is coming soon."
+    },
+    "confirmation": {
+      "title": "Thank you for your order!",
+      "text": "We have received your order and will start preparing it right away.",
+      "codeLabel": "Your order number",
+      "statusTitle": "Status",
+      "steps": [
+        "Received",
+        "In the kitchen",
+        "Ready",
+        "On the way / ready for pickup"
+      ],
+      "etaPickup": "Ready for pickup around {time}",
+      "etaDelivery": "Delivery around {time}",
+      "again": "New order",
+      "demoNote": "This is a demo order. No payment was taken."
+    },
+    "errors": {
+      "generic": "The order could not be sent. Please try again.",
+      "empty": "Please add a dish to the cart first.",
+      "minimum": "The minimum order value for delivery is {amount}.",
+      "street": "Please enter the street and house number.",
+      "postalCode": "Please enter a valid postcode.",
+      "city": "Please enter the city.",
+      "time": "Please choose a time within our opening hours."
+    }
+  },
+  "galleryPage": {
+    "eyebrow": "Gallery",
+    "titleParts": [
+      "A garden of",
+      "peace",
+      "in the heart of Berlin"
+    ],
+    "highlight": "peace",
+    "intro": "A look into our dining room, onto our plates and at the small details that make Vegan Garden.",
+    "categories": {
+      "all": "All",
+      "space": "Space",
+      "food": "Dishes",
+      "details": "Details",
+      "ingredients": "Ingredients"
+    },
+    "lightboxCount": "{current} of {total}",
+    "zoomHint": "Click to enlarge"
+  },
+  "contactPage": {
+    "eyebrow": "Contact",
+    "title": "Talk to us",
+    "intro": "Questions about the menu, about allergies or about a celebration? We are happy to help.",
+    "addressLabel": "Address",
+    "phoneLabel": "Phone",
+    "emailLabel": "E-mail",
+    "websiteLabel": "Website",
+    "hoursNote": "The kitchen closes 30 minutes before closing time.",
+    "placeholderNote": "The phone number, e-mail address and opening hours come from the design draft and will be confirmed before launch."
+  },
+  "newsletter": {
+    "title": "Newsletter",
+    "text": "Subscribe to our newsletter and receive special offers and news.",
+    "placeholder": "Your e-mail address",
+    "submit": "Subscribe",
+    "success": "Thank you! Please confirm the e-mail in your inbox.",
+    "error": "Please enter a valid e-mail address.",
+    "consent": "You can unsubscribe at any time. More about this in our privacy policy."
+  },
+  "footer": {
+    "description": "100 % plant-based Vietnamese cuisine, prepared with fresh ingredients, mindfulness and love.",
+    "quickLinks": "Quick links",
+    "connect": "Follow us",
+    "connectText": "Follow us for news, events and plant-based inspiration.",
+    "contact": "Contact",
+    "rights": "All rights reserved.",
+    "madeWith": "Made with care in Berlin."
+  },
+  "notFound": {
+    "title": "We could not find this page",
+    "text": "It may have moved – why not take a look at our menu instead."
+  },
+  "meta": {
+    "home": {
+      "title": "Vegan Garden Berlin – Vegan Vietnamese Restaurant in Friedrichshain",
+      "description": "100 % vegan Vietnamese restaurant at Frankfurter Allee 21 in Berlin-Friedrichshain. Vegan pho, summer rolls and more. Reserve a table or order online."
+    },
+    "story": {
+      "title": "Our Story – Vegan Garden Berlin",
+      "description": "Rooted in Vietnam, nourished by nature: how the culinary heritage of Vietnam became a 100 % plant-based kitchen in Berlin."
+    },
+    "menu": {
+      "title": "Menu – Vegan Vietnamese Food in Berlin",
+      "description": "Vegan pho, summer rolls, bun cha and curries – every dish purely plant-based, many of them gluten-free. View the menu now."
+    },
+    "reservation": {
+      "title": "Reserve a Table – Vegan Garden Berlin",
+      "description": "Reserve your table at Vegan Garden in Berlin-Friedrichshain in under a minute."
+    },
+    "order": {
+      "title": "Order Online – Vegan Garden Berlin",
+      "description": "Vegan Vietnamese dishes for pickup or delivery in Friedrichshain. Order online now."
+    },
+    "gallery": {
+      "title": "Gallery – Vegan Garden Berlin",
+      "description": "A look into our green dining room, onto our plates and at the details that make Vegan Garden."
+    },
+    "contact": {
+      "title": "Contact & Directions – Vegan Garden Berlin",
+      "description": "Frankfurter Allee 21, 10247 Berlin-Friedrichshain. Opening hours, directions and contact for Vegan Garden."
+    },
+    "impressum": {
+      "title": "Legal Notice – Vegan Garden Berlin",
+      "description": "Provider identification under § 5 TMG for Vegan Garden Berlin."
+    },
+    "privacy": {
+      "title": "Privacy Policy – Vegan Garden Berlin",
+      "description": "Information on the processing of personal data on vegangarden-berlin.de."
+    },
+    "terms": {
+      "title": "Terms & Conditions – Vegan Garden Berlin",
+      "description": "General terms and conditions for reservations and online orders at Vegan Garden Berlin."
+    }
+  },
+  "experience": {
+    "eyebrow": "3D Experience",
+    "title": "See your dish before you order",
+    "text": "Scan the code and see our signature dishes in 3D right on your table – portion size, ingredients and heat at a glance.",
+    "scan": "Scan with your camera",
+    "hint": "Runs straight in the browser, no app needed.",
+    "qrAlt": "QR code to the Vegan Garden menu"
+  },
+  "weekdaysShort": {
+    "0": "Sun",
+    "1": "Mon",
+    "2": "Tue",
+    "3": "Wed",
+    "4": "Thu",
+    "5": "Fri",
+    "6": "Sat"
+  }
+}

@@ -4,10 +4,14 @@ import { LOCALES, type Locale } from '@/types'
 import { useLocale } from '@/i18n/LocaleProvider'
 import { cn } from '@/lib/format'
 
-const labels: Record<Locale, string> = { vi: 'VI', de: 'DE' }
-const names: Record<Locale, string> = { vi: 'Tiếng Việt', de: 'Deutsch' }
+const labels: Record<Locale, string> = { de: 'DE', en: 'EN', vi: 'VI' }
+const names: Record<Locale, string> = {
+  de: 'Deutsch',
+  en: 'English',
+  vi: 'Tiếng Việt',
+}
 
-/** VI / DE segmented control. */
+/** DE / EN / VI segmented control. */
 export function LanguageSwitcher({
   className,
   tone = 'default',
@@ -16,7 +20,7 @@ export function LanguageSwitcher({
   tone?: 'default' | 'onDark'
 }) {
   const { locale, setLocale, t } = useLocale()
-  const order: Locale[] = ['vi', 'de']
+  const order: Locale[] = ['de', 'en', 'vi']
 
   return (
     <div

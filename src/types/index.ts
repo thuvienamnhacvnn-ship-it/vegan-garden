@@ -1,9 +1,13 @@
-export type Locale = 'de' | 'vi'
+export type Locale = 'de' | 'en' | 'vi'
 
-export const LOCALES: Locale[] = ['de', 'vi']
+export const LOCALES: Locale[] = ['de', 'en', 'vi']
 export const DEFAULT_LOCALE: Locale = 'de'
 
-/** A piece of content that exists in both site languages. */
+/**
+ * A piece of content that exists in every site language. Because this is a
+ * `Record` over `Locale`, adding a language above turns every incomplete
+ * content entry into a TypeScript error - the compiler is the checklist.
+ */
 export type Localized<T = string> = Record<Locale, T>
 
 export type MenuCategory =
