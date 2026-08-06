@@ -314,13 +314,25 @@ to `http://localhost:3020`, and that fallback ends up inside `sitemap.xml`,
 `ADMIN_PASSWORD` (empty disables `/admin` entirely) and the WhatsApp trio if
 owner alerts should go out.
 
-**2. `data-store/` does not persist.** Serverless filesystems are read-only and
-thrown away between invocations. `appendRecord` catches the write failure and
-logs the record instead of failing the guest's request, so bookings still
-*appear* to work — but nothing is stored and the `/admin` inbox stays empty.
-Before taking real bookings, replace the two functions in `src/lib/store.ts`
-with a database (that file is the only seam), or set
-`RESERVATION_STORAGE=console` to make the behaviour explicit.
+**2. Connect Supabase, or nothing is stored.** Serverless filesystems are
+read-only and thrown away between invocations, so the `data-store/*.json`
+fallback loses every booking in production. `appendRecord` catches the failure
+and logs the record rather than failing the guest's request — which means
+bookings still *appear* to work while the `/admin` inbox stays empty. To set it
+up:
+
+1. Create a Supabase project.
+2. Run `supabase/schema.sql` once (Dashboard → SQL Editor).
+3. Set `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` in Vercel.
+
+`src/lib/store.ts` picks Supabase automatically once both are present, and
+falls back to the file store locally so a checkout still runs end to end with
+no account. `/admin` shows which backend is live and warns in red whenever it
+is not the database.
+
+The service-role key bypasses row-level security and must stay server-side —
+the table holds guest names, phone numbers and delivery addresses. The schema
+enables RLS with no policy on purpose, so the anon key can read nothing.
 
 ## Before going live
 

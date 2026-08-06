@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { adminEnabled, isAuthenticated } from '@/lib/adminAuth'
-import { readRecords, type StoredRecord } from '@/lib/store'
+import { readRecords, storageBackend, type StoredRecord } from '@/lib/store'
 import { AdminLogin } from './AdminLogin'
 import { AdminInbox } from './AdminInbox'
 
@@ -40,5 +40,11 @@ export default async function AdminPage() {
   const newest = (records: StoredRecord[]) =>
     [...records].sort((a, b) => String(b.createdAt).localeCompare(String(a.createdAt)))
 
-  return <AdminInbox reservations={newest(reservations)} orders={newest(orders)} />
+  return (
+    <AdminInbox
+      reservations={newest(reservations)}
+      orders={newest(orders)}
+      backend={storageBackend()}
+    />
+  )
 }

@@ -59,9 +59,12 @@ interface OrderLine {
 export function AdminInbox({
   reservations,
   orders,
+  backend,
 }: {
   reservations: StoredRecord[]
   orders: StoredRecord[]
+  /** Where submissions are actually being written. See the warning below. */
+  backend: 'supabase' | 'file' | 'console'
 }) {
   const router = useRouter()
   const [tab, setTab] = useState<Tab>('reservations')
@@ -104,7 +107,10 @@ export function AdminInbox({
             <Logo variant="mark" alt="" className="h-9 w-auto" />
             <div>
               <h1 className="font-display text-xl leading-none text-ink">Admin</h1>
-              <p className="mt-1 text-[0.75rem] text-ink-subtle">Vegan Garden Berlin</p>
+              <p className="mt-1 text-[0.75rem] text-ink-subtle">
+                Vegan Garden Berlin
+                {backend === 'supabase' ? ' · Datenbank verbunden' : null}
+              </p>
             </div>
           </div>
 
@@ -130,6 +136,30 @@ export function AdminInbox({
       </header>
 
       <div className="container-page py-8">
+        {/* The failure this guards against is a silent one: a booking still
+            looks accepted to the guest, but nothing is written and this inbox
+            stays empty. Better to say so on every visit than to be trusted
+            wrongly. */}
+        {backend !== 'supabase' ? (
+          <div className="mb-6 flex gap-3 rounded-[var(--radius-md)] border border-danger/40 bg-danger/5 p-4">
+            <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0 text-danger" strokeWidth={1.8} />
+            <div className="text-[0.85rem] leading-relaxed text-ink-muted">
+              <p className="font-semibold text-ink">
+                {backend === 'console'
+                  ? 'Bestellungen werden nicht gespeichert (Konsolen-Modus).'
+                  : 'Keine Datenbank verbunden — Bestellungen gehen verloren.'}
+              </p>
+              <p className="mt-1">
+                Reservierungen und Bestellungen werden derzeit nicht dauerhaft
+                gespeichert. Auf einem Server ohne beschreibbares Dateisystem bleibt
+                dieser Posteingang deshalb leer. <code>SUPABASE_URL</code> und{' '}
+                <code>SUPABASE_SERVICE_ROLE_KEY</code> setzen und{' '}
+                <code>supabase/schema.sql</code> einmal ausführen.
+              </p>
+            </div>
+          </div>
+        ) : null}
+
         {/* tabs -------------------------------------------------------- */}
         <div role="tablist" className="flex gap-2">
           {(['reservations', 'orders'] as const).map((key) => {
