@@ -25,7 +25,9 @@ export function CommitmentBand() {
           </p>
         </div>
 
-        <ul className="mt-14 grid gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-5">
+        {/* Two columns on a phone. One column made this band 1315px — three
+            screens of scrolling for five short lines of copy. */}
+        <ul className="mt-9 grid grid-cols-2 gap-x-5 gap-y-8 sm:mt-14 sm:gap-x-8 sm:gap-y-12 lg:grid-cols-5">
           {brandValues.map((value, index) => {
             const Icon = valueIconMap[value.icon]
             return (
@@ -37,13 +39,13 @@ export function CommitmentBand() {
                 transition={{ duration: 0.6, delay: index * 0.08, ease: [0.22, 1, 0.36, 1] }}
                 className="flex flex-col items-center px-2 text-center"
               >
-                <span className="inline-flex h-20 w-20 items-center justify-center rounded-full border border-gold-band/45 text-gold-band">
-                  <Icon className="h-9 w-9" />
+                <span className="inline-flex h-14 w-14 items-center justify-center rounded-full border border-gold-band/45 text-gold-band sm:h-20 sm:w-20">
+                  <Icon className="h-7 w-7 sm:h-9 sm:w-9" />
                 </span>
-                <h3 className="mt-6 text-[0.8rem] font-semibold uppercase tracking-[0.14em] text-gold-band">
+                <h3 className="mt-4 text-[0.72rem] font-semibold uppercase tracking-[0.12em] text-gold-band sm:mt-6 sm:text-[0.8rem] sm:tracking-[0.14em]">
                   {t(`brandBar.items.${index}.title`)}
                 </h3>
-                <p className="mt-3 text-[0.9rem] leading-relaxed text-on-band-muted">
+                <p className="mt-2 text-[0.8rem] leading-relaxed text-on-band-muted sm:mt-3 sm:text-[0.9rem]">
                   {t(`brandBar.items.${index}.text`)}
                 </p>
               </motion.li>

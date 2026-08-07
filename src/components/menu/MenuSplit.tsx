@@ -254,12 +254,12 @@ export function MenuSplit({ onAdd }: { onAdd?: (dish: Dish, quantity: number, no
                       ease: [0.22, 1, 0.36, 1],
                     }}
                   >
-                    <article className="group flex h-full flex-col overflow-hidden rounded-[var(--radius-lg)] border border-line bg-card shadow-[var(--shadow-sm)] transition-[transform,box-shadow,border-color] duration-500 ease-[var(--ease-out-luxe)] hover:-translate-y-1 hover:border-gold/50 hover:shadow-[var(--shadow-md)]">
+                    <article className="group flex h-full flex-row overflow-hidden sm:flex-col rounded-[var(--radius-lg)] border border-line bg-card shadow-[var(--shadow-sm)] transition-[transform,box-shadow,border-color] duration-500 ease-[var(--ease-out-luxe)] hover:-translate-y-1 hover:border-gold/50 hover:shadow-[var(--shadow-md)]">
                       <button
                         type="button"
                         onClick={() => setSelected(dish)}
                         aria-label={`${t('common.details')}: ${dish.nameVi}`}
-                        className="relative block aspect-4/3 w-full overflow-hidden"
+                        className="relative block h-auto w-28 shrink-0 self-stretch overflow-hidden sm:aspect-4/3 sm:h-auto sm:w-full sm:self-auto"
                       >
                         <Image
                           src={dish.image}
@@ -276,13 +276,13 @@ export function MenuSplit({ onAdd }: { onAdd?: (dish: Dish, quantity: number, no
                         ) : null}
                       </button>
 
-                      <div className="flex flex-1 flex-col p-5">
+                      <div className="flex min-w-0 flex-1 flex-col p-3.5 sm:p-5">
                         <button
                           type="button"
                           onClick={() => setSelected(dish)}
                           className="text-left"
                         >
-                          <h3 className="font-display text-xl leading-tight text-ink">
+                          <h3 className="font-display text-[1.05rem] leading-tight text-ink sm:text-xl">
                             {dish.nameVi}
                           </h3>
                           <p className="mt-1 text-[0.74rem] uppercase tracking-[0.1em] text-ink-subtle">
@@ -290,11 +290,11 @@ export function MenuSplit({ onAdd }: { onAdd?: (dish: Dish, quantity: number, no
                           </p>
                         </button>
 
-                        <p className="mt-3 flex-1 text-[0.85rem] leading-relaxed text-ink-muted">
+                        <p className="mt-2 line-clamp-2 flex-1 text-[0.8rem] leading-relaxed text-ink-muted sm:mt-3 sm:line-clamp-none sm:text-[0.85rem]">
                           {pick(dish.description)}
                         </p>
 
-                        <div className="mt-4 flex flex-wrap gap-1.5">
+                        <div className="mt-2.5 hidden flex-wrap gap-1.5 sm:mt-4 sm:flex">
                           {(dish.tags.filter((tag) => tag !== 'vegan') as DishTag[])
                             .slice(0, 2)
                             .map((tag) => (
@@ -303,8 +303,8 @@ export function MenuSplit({ onAdd }: { onAdd?: (dish: Dish, quantity: number, no
                           <Badge>{t(`menuPage.spice.${dish.spice}`)}</Badge>
                         </div>
 
-                        <div className="mt-5 flex items-center justify-between gap-3 border-t border-line pt-4">
-                          <span className="font-display text-2xl text-ink tabular-nums">
+                        <div className="mt-2.5 flex items-center justify-between gap-3 border-line pt-2.5 sm:mt-5 sm:border-t sm:pt-4">
+                          <span className="font-display text-lg text-ink tabular-nums sm:text-2xl">
                             {formatPrice(dish.price, locale)}
                           </span>
                           {onAdd ? (

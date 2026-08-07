@@ -8,7 +8,7 @@ import { brandValues } from '@/data/values'
 import { averageRating, reviews } from '@/data/reviews'
 import { useLocale } from '@/i18n/LocaleProvider'
 import { useCart } from '@/components/cart/CartProvider'
-import { formatPrice } from '@/lib/format'
+import { formatPrice, cn } from '@/lib/format'
 import { groupedOpeningHours } from '@/lib/hours'
 import { valueIconMap } from '@/components/ui/Icons'
 import { ButtonLink } from '@/components/ui/Button'
@@ -200,9 +200,18 @@ export function BentoBlock() {
             </p>
           </div>
 
-          <ul className="mt-8 grid gap-5 md:grid-cols-3">
-            {reviews.slice(0, 3).map((review) => (
-              <li key={review.id} className="rounded-[var(--radius-md)] border border-line p-6">
+          {/* One voice on a phone, three from `sm` up. Stacked, all three came
+              to 1009px - a full screen of scrolling for the same point made
+              once. */}
+          <ul className="mt-6 grid gap-5 sm:mt-8 md:grid-cols-3">
+            {reviews.slice(0, 3).map((review, index) => (
+              <li
+                key={review.id}
+                className={cn(
+                  'rounded-[var(--radius-md)] border border-line p-5 sm:p-6',
+                  index > 0 && 'hidden sm:block'
+                )}
+              >
                 <p className="text-[0.95rem] leading-relaxed text-ink-muted">{pick(review.text)}</p>
                 <p className="mt-5 font-display text-xl text-ink">{review.author}</p>
                 <p className="text-[0.8rem] text-ink-subtle">{pick(review.origin)}</p>

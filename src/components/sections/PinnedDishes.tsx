@@ -94,7 +94,7 @@ export function PinnedDishes() {
           </div>
 
           {/* the list ----------------------------------------------------- */}
-          <ol className="space-y-16 lg:space-y-32">
+          <ol className="space-y-10 sm:space-y-16 lg:space-y-32">
             {signatureDishes.map((entry, index) => (
               <li
                 key={entry.id}
@@ -104,11 +104,15 @@ export function PinnedDishes() {
                 className={cn(
                   'transition-opacity duration-500',
                   'lg:opacity-40',
-                  index === active && 'lg:opacity-100'
+                  index === active && 'lg:opacity-100',
+                  // A phone sees two of the four. The bento block further down
+                  // lists the same signature dishes with an add-to-cart, so all
+                  // four here was the same content twice, 1100px apart.
+                  index > 1 && 'hidden sm:block'
                 )}
               >
                 {/* the image travels with each item on small screens */}
-                <div className="relative mb-6 aspect-4/3 overflow-hidden rounded-[var(--radius-lg)] border border-line lg:hidden">
+                <div className="relative mb-4 aspect-16/10 overflow-hidden rounded-[var(--radius-lg)] border border-line sm:mb-6 sm:aspect-4/3 lg:hidden">
                   <Image
                     src={entry.image}
                     alt={`${entry.nameVi} – ${pick(entry.name)}`}
@@ -122,14 +126,16 @@ export function PinnedDishes() {
                   {String(index + 1).padStart(2, '0')}
                 </span>
 
-                <h3 className="display-md mt-3">{entry.nameVi}</h3>
-                <p className="mt-2 text-[0.9rem] uppercase tracking-[0.14em] text-ink-subtle">
+                <h3 className="display-md mt-2 sm:mt-3">{entry.nameVi}</h3>
+                <p className="mt-1.5 text-[0.8rem] uppercase tracking-[0.14em] text-ink-subtle sm:mt-2 sm:text-[0.9rem]">
                   {pick(entry.name)}
                 </p>
 
-                <p className="lead mt-5 max-w-lg text-ink-muted">{pick(entry.description)}</p>
+                <p className="lead mt-3 max-w-lg text-ink-muted sm:mt-5">
+                  {pick(entry.description)}
+                </p>
 
-                <div className="mt-7 flex flex-wrap items-center gap-6">
+                <div className="mt-4 flex flex-wrap items-center gap-4 sm:mt-7 sm:gap-6">
                   <span className="font-display text-3xl tabular-nums text-ink">
                     {formatPrice(entry.price, locale)}
                   </span>
